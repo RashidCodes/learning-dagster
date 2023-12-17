@@ -2,7 +2,8 @@
 from . import (
     software_defined,
     graph_backed,
-    multi_assets
+    multi_assets,
+    partitioned_assets
 )
 
 from dagster import (
@@ -24,4 +25,8 @@ graph_backed_assets: List = load_assets_from_package_module(
 
 multi_assets_assets = load_assets_from_package_module(
     package_module=multi_assets
+)
+
+partitioned_assets_assets = load_assets_from_package_module(
+    package_module=partitioned_assets
 )
