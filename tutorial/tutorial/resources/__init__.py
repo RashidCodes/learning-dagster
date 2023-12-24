@@ -2,10 +2,11 @@ from dataclasses import asdict, dataclass
 from datetime import datetime, timedelta
 from random import Random
 from typing import Sequence, Union
-
+from requests import Response
 from dagster import ConfigurableResource
 from faker import Faker
 from pydantic import Field
+import requests
 
 # This file holds a resource you'll use in the tutorial
 # You won't need to use this file/class until the Connecting to External Services section of the tutorial (Part 8).
@@ -169,3 +170,16 @@ class DataGeneratorResource(ConfigurableResource):
     def get_signups_for_date(self, date: str):
         date_obj = datetime.strptime(date, "%m-%d-%Y")
         return self.generator.get_signups_for_date(date_obj)
+
+
+
+class CredentialResource(ConfigurableResource):
+    username: str 
+    password: str 
+
+
+class DatabaseResource(ConfigurableResource):
+    table: str 
+
+    def read(self):
+        return f"I'm reading from table: {self.table}"

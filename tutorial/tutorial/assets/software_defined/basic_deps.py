@@ -3,8 +3,13 @@ from dagster import (
     AssetExecutionContext,
     AssetObservation,
     AssetKey,
-    AssetIn
+    AssetIn,
+    FreshnessPolicy,
+    ResourceParam
 )
+
+from ...resources import CredentialResource
+from ...resources.resource_dependency import GitHub
 
 file_name = __file__.split("/")[-1].replace(".py", "")
 
@@ -90,3 +95,41 @@ def say_hello_four(context: AssetExecutionContext, say_hello_four: str):
     )
 
 
+@asset(
+    freshness_policy=FreshnessPolicy(maximum_lag_minutes=2)
+)
+def my_table(context: AssetExecutionContext):
+    context.log.info("Returning 1!")
+    return 1
+
+
+@asset
+def use_credential_resource(
+    context: AssetExecutionContext,
+    credential_resource: CredentialResource
+) -> None:
+    context.log.info(f"Username: {credential_resource.username}")
+    context.log.info(f"Password: {credential_resource.password}")
+
+
+# using bare python objects are resources 
+@asset 
+def public_github_repos(
+    context: AssetExecutionContext, 
+    github: ResourceParam[GitHub]
+):
+    """
+    `ResourceParam[GitHub]` is treated exactly like `GitHub` for
+    type checking purposes and the runtime type of the github parameter
+    is `GitHub`. 
+
+    The purpose of the `ResourceParam` wrapper is to let Dagster know
+    that `github` is a resource and not an upstream asset
+    """
+    repos = (
+        github
+        .organisation("dagster-io")
+        .repositories()
+    )
+    context.log.info(f"Repos: {repos}")
+    return repos

@@ -4,7 +4,8 @@ from dagster import (
     daily_partitioned_config, 
     op, 
     job,
-    validate_run_config
+    validate_run_config, 
+    materialize
 ) 
 from datetime import datetime
 

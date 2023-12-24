@@ -20,7 +20,8 @@ from dagster import (
     OpExecutionContext,
     daily_partitioned_config,
     static_partitioned_config,
-    asset
+    asset,
+    build_schedule_from_partitioned_job
 )
 
 from datetime import datetime
@@ -95,6 +96,13 @@ def process_data_for_date(
 @job(config=my_partition_config)
 def do_stuff_partitioned():
     process_data_for_date()
+
+
+# build a schedule from the partitions
+do_stuff_partitioned_schedule = build_schedule_from_partitioned_job(
+    job=do_stuff_partitioned,
+    description="test partition job"
+)
 
 
 CONTINENTS = [
