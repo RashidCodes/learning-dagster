@@ -5,3 +5,8 @@ An asset is an object in persistent storage that captures some understanding of 
 ```bash
 dagster project from-example --example tutorial
 ```
+
+# Learnings 
+Mock
+Pydantic 
+Context managers

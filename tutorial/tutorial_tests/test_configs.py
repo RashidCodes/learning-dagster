@@ -137,7 +137,6 @@ def test_pet_stats():
 
 
 def test_scoreboard():
-
     @asset 
     def scoreboard(config: MyDataStructureConfig):
         return config.user_names

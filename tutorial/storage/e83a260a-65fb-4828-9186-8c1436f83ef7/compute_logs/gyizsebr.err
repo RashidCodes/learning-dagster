@@ -1,0 +1,8 @@
+[32m2023-12-30 02:54:12 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - e83a260a-65fb-4828-9186-8c1436f83ef7 - 18548 - LOGS_CAPTURED - Started capturing logs in process (pid: 18548).
+[32m2023-12-30 02:54:12 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - e83a260a-65fb-4828-9186-8c1436f83ef7 - 18548 - get_from_mapp - STEP_START - Started execution of step "get_from_mapp".
+[32m2023-12-30 02:54:12 +1100[0m - dagster - [34mINFO[0m - __ASSET_JOB - e83a260a-65fb-4828-9186-8c1436f83ef7 - get_from_mapp - Getting from solver
+[32m2023-12-30 02:54:12 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - e83a260a-65fb-4828-9186-8c1436f83ef7 - 18548 - get_from_mapp - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2023-12-30 02:54:12 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - e83a260a-65fb-4828-9186-8c1436f83ef7 - get_from_mapp - Writing file at: /Users/kingmoh/Desktop/learning-dagster/tutorial/storage/get_from_mapp using PickledObjectFilesystemIOManager...
+[32m2023-12-30 02:54:12 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - e83a260a-65fb-4828-9186-8c1436f83ef7 - 18548 - get_from_mapp - ASSET_MATERIALIZATION - Materialized value get_from_mapp.
+[32m2023-12-30 02:54:12 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - e83a260a-65fb-4828-9186-8c1436f83ef7 - 18548 - get_from_mapp - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2023-12-30 02:54:12 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - e83a260a-65fb-4828-9186-8c1436f83ef7 - 18548 - get_from_mapp - STEP_SUCCESS - Finished execution of step "get_from_mapp" in 58ms.

@@ -5,3 +5,7 @@ venv
 .env
 data
 tmp*
+*.csv
+*.nux*
+*.telemetry*
+*history*

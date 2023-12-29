@@ -1,0 +1,8 @@
+[32m2023-12-25 20:01:42 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_0 - 27b685c8-6e5a-4b08-886e-a90db7db6ace - 31082 - LOGS_CAPTURED - Started capturing logs in process (pid: 31082).
+[32m2023-12-25 20:01:42 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_0 - 27b685c8-6e5a-4b08-886e-a90db7db6ace - 31082 - my_table - STEP_START - Started execution of step "my_table".
+[32m2023-12-25 20:01:42 +1100[0m - dagster - [34mINFO[0m - __ASSET_JOB_0 - 27b685c8-6e5a-4b08-886e-a90db7db6ace - my_table - Returning 1!
+[32m2023-12-25 20:01:42 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_0 - 27b685c8-6e5a-4b08-886e-a90db7db6ace - 31082 - my_table - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2023-12-25 20:01:42 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_0 - 27b685c8-6e5a-4b08-886e-a90db7db6ace - my_table - Writing file at: /Users/kingmoh/Desktop/learning-dagster/tutorial/storage/my_table using PickledObjectFilesystemIOManager...
+[32m2023-12-25 20:01:42 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_0 - 27b685c8-6e5a-4b08-886e-a90db7db6ace - 31082 - my_table - ASSET_MATERIALIZATION - Materialized value my_table.
+[32m2023-12-25 20:01:42 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_0 - 27b685c8-6e5a-4b08-886e-a90db7db6ace - 31082 - my_table - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2023-12-25 20:01:42 +1100[0m - dagster - [34mDEBUG[0m - __ASSET_JOB_0 - 27b685c8-6e5a-4b08-886e-a90db7db6ace - 31082 - my_table - STEP_SUCCESS - Finished execution of step "my_table" in 57ms.

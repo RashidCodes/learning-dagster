@@ -1,0 +1,2 @@
+# Workspace files 
+A collection of user-defined code locations and information about where to find them. Code locations loaded via workspace files can contain either a `Definitions` object or multiple repositories.
